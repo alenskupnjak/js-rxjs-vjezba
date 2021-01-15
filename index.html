@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>RxJS Boiler</title>
+	<style>
+		.posts {
+			display: flex;
+			flex-direction: column;
+			background: rgba(0, 0, 0, 0.1);
+		}
+	</style>
+</head>
+
+<body onclick="myFunction(event)">
+	<h1>RxJS Boiler</h1>
+
+	<button id="btn01">btn01</button>
+	<input type="text" id="input">
+
+	<div id="output"></div>
+	<!-- <button id="btn02">btn02</button> -->
+	<!-- <button id="btn03">btn03</button> -->
+	<!-- <button id="btn04">btn04</button> -->
+	<!-- <button id="btn05">btn05</button> -->
+
+	<ul id="posts" class="posts">
+
+	</ul>
+
+
+
+	<p class="prvi">Click on a paragraph. An alert box will alert the element whose eventlistener triggered the event.</p>
+	<p class="drugi"><strong>Note:</strong> The currentTarget property does not necessarily return the element that was
+		clicked on, but
+		the element whose eventlistener triggered the event.</p>
+
+	<script src="./dist/app.bundle.js"></script>
+</body>
+
+<script>
+	function myFunction(event) {
+		console.log(event.currentTarget);
+		console.log(event.target);
+	}
+</script>
+
+</html>
